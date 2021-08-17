@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your account | MSS Online Bank</title>
+
+    <!-- Link for Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="mx-8">
+    <!-- Header area -->
+    <header>
+        <h4 class="text-4xl"><span class="font-extrabold text-yellow-400">MSS</span> Online Bank</h4>
+        <h1 class="text-6xl text-center mt-8">Welcome to your <span class="font-extrabold text-yellow-400">MSS</span>
+            Online
+            Bank account!!!</h1>
+    </header>
+    <!-- Main area -->
+    <main>
+        <!-- Money counting section -->
+        <section class="my-12">
+            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+                <div class="p-8 text-white bg-blue-400 rounded">
+                    <h3 class="text-2xl">Deposit</h3>
+                    <h2 class="text-4xl font-medium">$<span id="deposit-total">00</span></h2>
+                </div>
+                <div class="p-8 text-white bg-green-400 rounded">
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <h2 class="text-4xl font-medium">$<span id="withdraw-balance">00</span></h2>
+                </div>
+                <div class="p-8 text-white bg-yellow-400 rounded">
+                    <h3 class="text-2xl">Available Balance</h3>
+                    <h2 class="text-4xl font-medium">$<span id="total-balance">00</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- Deposit and Withdraw section -->
+        <section class="my-12">
+            <div class="grid grid-cols-2 gap-4 w-3/4 mx-auto">
+                <div class="p-8 bg-blue-400 rounded">
+                    <h3 class="text-3xl font-extrabold text-white">Please Deposit</h3>
+                    <p id="error-throw-deposit" class="text-red-500	text-xl	font-light"></p>
+                    <input id="deposit-amount" class="block border-gray-300	rounded my-6 p-2 w-full" type="text" name=""
+                        placeholder="$ amount you want to deposit">
+                    <button id="deposit-submit"
+                        class="bg-green-400	text-white font-semibold rounded px-5 py-2">Deposit</button>
+                </div>
+                <div class="p-8 bg-green-400 rounded">
+                    <h3 class="text-3xl font-extrabold text-white">Please Withdraw</h3>
+                    <p id="error-throw-withdraw" class="text-red-500 text-xl font-light"></p>
+                    <input id="withdraw-amount" class="block border-gray-300	rounded my-6 p-2 w-full" type="text"
+                        name="" placeholder="$ amount you want to withdraw">
+                    <button id="withdraw-submit"
+                        class="bg-blue-400	text-white font-semibold rounded px-5 py-2">Withdraw</button>
+                </div>
+        </section>
+    </main>
+
+    <!-- Link for script file -->
+    <script src="js/banking-script.js"></script>
+</body>
+
+</html>
